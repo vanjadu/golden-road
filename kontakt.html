@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <title>Golden Road Build | Kontakt</title>
+    <link rel="stylesheet" href="css/main.min.css" />
+  </head>
+  <body class="is-loading">
+    <div class="contact-page">
+      <a href="index.html" id="contact-back"
+        ><img src="img/icons/left-arrow.svg" alt="" /> Nazad na naslovnu</a
+      >
+      <div class="contact-wrapper">
+        <div class="col col-one">
+          <img src="img/kopac.png" alt="kopac" />
+        </div>
+        <div class="col col-two">
+          <h1>Pišite nam</h1>
+          <p>Kontaktrijate nas i odgovorićemo Vam u roku od 24 časa.</p>
+          <form action="mailer.php" method="POST" name="myForm" id="myForm">
+            <p class="input-container">
+              <input type="text" class="form-input" />
+              <label for="name" unselectable="on">Ime</label>
+            </p>
+            <p class="input-container">
+              <input type="text" class="form-input" />
+              <label for="email" unselectable="on">Email</label>
+            </p>
+            <p class="input-container">
+              <input type="tel" class="form-input" />
+              <label for="tel" unselectable="on">Telefon</label>
+            </p>
+            <p class="input-container">
+              <input type="text" class="form-input" />
+              <label for="message" unselectable="on">Poruka</label>
+            </p>
+            <button type="submit" class="button">Pošalji</button>
+          </form>
+        </div>
+      </div>
+      <svg
+        class="blob"
+        viewBox="0 0 600 600"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g transform="translate(300,300)">
+          <path
+            d="M120,-157.6C152.7,-141.5,174.3,-102.6,194.8,-58.8C215.3,-14.9,234.6,33.8,228.4,80.8C222.2,127.8,190.4,173.1,148.1,184C105.8,195,52.9,171.5,-2.4,174.8C-57.8,178.2,-115.6,208.4,-137.5,190.9C-159.3,173.3,-145.3,108,-153,56.3C-160.7,4.6,-190.2,-33.4,-178.3,-54.2C-166.4,-75.1,-113.2,-78.8,-76.6,-93.6C-40,-108.3,-20,-134.2,11.9,-150.5C43.7,-166.8,87.4,-173.6,120,-157.6Z"
+            fill="#333333"
+          />
+        </g>
+      </svg>
+    </div>
+
+    <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div>
+
+    <div class="loading">
+      <div class="loader">
+        <div class="inner one"></div>
+        <div class="inner two"></div>
+        <div class="inner three"></div>
+      </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      // Inputi kontakt forme
+      $(".form-input").focus(function () {
+        $(this).parent().addClass("animation animation-color");
+      });
+
+      $(".form-input").focusout(function () {
+        if ($(this).val() === "") $(this).parent().removeClass("animation");
+        $(this).parent().removeClass("animation-color");
+      });
+    </script>
+  </body>
+</html>
